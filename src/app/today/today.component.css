@@ -1,0 +1,20 @@
+.container{
+    margin: auto;
+   background-image: url(https://thumbs.dreamstime.com/b/free-blank-map-world-113110666.jpg);
+   background-color: dimgrey;
+   padding-bottom: 23pc;
+
+}
+.row{
+margin-left: 38%;
+}
+.input-group-append{
+    margin-left: 12%;   
+  
+} 
+.form-control{
+    font-size: 20px;  
+}
+.hpssg{
+        margin-left: 100px;
+}

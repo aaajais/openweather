@@ -1,0 +1,37 @@
+
+<div class="container">
+<div class="row">
+    <div class="input-group mt-5">
+        <input class ="form-control" type="text" #userInput placeholder="enter city name">
+        <div class="input-group-append">
+            <button class="input-group-text-btn btn" (click)="getCity(userInput.value)">Search</button>
+        </div>
+    </div>
+    <div class="card">
+<h2>Current weather & forecasts in your {{city}}</h2>
+<h2></h2>
+</div>
+<div>
+<table class="hpssg">
+<tbody>
+    <h3><i>
+<tr>
+    <td>Humidity:{{hum}}</td><td></td>
+</tr>
+<tr>
+    <td>Pressure:{{pre}}</td><td></td>
+</tr>
+<tr>
+    <td>Sunrise:{{srise|date:'short'}}</td><td></td>
+</tr>
+<tr>
+    <td>Sunset{{sset|date:'short'}}</td><td></td>
+</tr>
+<tr>Geo coords</tr><td></td></i></h3>
+
+</tbody>
+</table>
+</div>
+<agm-map [latitude]="lat"[longitude]="lon"></agm-map>
+</div>
+</div>
