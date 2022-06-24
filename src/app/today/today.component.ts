@@ -8,6 +8,7 @@ import { WeatherService } from '../weather.service';
 })
 export class TodayComponent implements OnInit {
   lat: any;
+  tem:any;
   lon: any;
   weather: any;
   locationDeined:boolean =true;
@@ -43,10 +44,14 @@ export class TodayComponent implements OnInit {
 getCity(city:any){
   this.weatherService.getweatherDataByCityName(city).subscribe((data:any)=>{
     this.city=data.name
+
+    this.tem=data.main.temp;
+    this.tem=this.tem-273.15;
+    
     this.hum=data.main.humidity
     this.pre=data.main.pressure
-    this.sset=data.sys.sunset
-    this.srise=data.sys.sunrise
+    // this.sset=data.sys.sunset
+    // this.srise=data.sys.sunrise
    console.log("data",this.hum)
   });
 }
